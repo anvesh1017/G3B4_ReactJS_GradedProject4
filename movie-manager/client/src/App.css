@@ -99,6 +99,11 @@
   margin-right: 10px;
 }
 
+.details-image:hover {
+  box-shadow: 2px 2px 5px 5px lightgrey;
+  background-color: black;
+}
+
 button.back-to-home {
   background-color: transparent;
   color: #258af0;

@@ -28,7 +28,7 @@ const MovieDetails = () => {
 
         <Row>
             <Col xs={12} md={6} lg={3}>
-                <Image onClick={() => setShow(true)} alt={movie.title} src={movie.posterurl} rounded />
+                <Image className="details-image" onClick={() => setShow(true)} alt={movie.title} src={movie.posterurl} thumbnail />
             </Col>
             <Col xs={12} md={6} lg={9}>
                 <h3 className="text-start" >{movie.title}</h3>
