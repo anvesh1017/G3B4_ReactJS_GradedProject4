@@ -105,3 +105,16 @@ button.back-to-home:hover {
   background-color: transparent;
   color: #258af0;
 }
+
+.image-modal .modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.image-modal .modal-header {
+  border: none;
+}
+
+.image-modal img {
+  width: 100%;
+}

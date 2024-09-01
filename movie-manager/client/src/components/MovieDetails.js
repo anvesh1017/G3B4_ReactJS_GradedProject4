@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button, Container, Row, Col, Table  } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
+import ImageModal from "./ImageModal";
 
 const MovieDetails = () => {
 
@@ -9,6 +10,8 @@ const MovieDetails = () => {
     const navigate = useNavigate();
 
     const movie = location.state?.movie || {};
+
+    const [show, setShow] = useState(false);
 
     const handleClick = () => {
         navigate("/");
@@ -25,7 +28,7 @@ const MovieDetails = () => {
 
         <Row>
             <Col xs={12} md={6} lg={3}>
-                <Image alt={movie.title} src={movie.posterurl} rounded />
+                <Image onClick={() => setShow(true)} alt={movie.title} src={movie.posterurl} rounded />
             </Col>
             <Col xs={12} md={6} lg={9}>
                 <h3 className="text-start" >{movie.title}</h3>
@@ -67,6 +70,8 @@ const MovieDetails = () => {
                 </Table>
             </Col>
         </Row>
+
+        <ImageModal showModal={show} handleModalClose={() => setShow(false)} imageSrc={movie.posterurl} title={movie.title}  />
         
         </Container>
     );
