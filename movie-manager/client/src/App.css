@@ -46,6 +46,7 @@
 
 .movie-card {
   width: 14rem;
+  transition: 0.3s;
 }
 
 .movie-card:hover {
